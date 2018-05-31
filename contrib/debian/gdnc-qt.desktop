@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=GDNC
+Comment=GDNC P2P Cryptocurrency
+Comment[fr]=GDNC, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=GDNC, eşten eşe kriptografik sanal para birimi
+Exec=gdnc-qt %u
+Terminal=false
+Type=Application
+Icon=gdnc128
+MimeType=x-scheme-handler/gdnc;
+Categories=Office;Finance;

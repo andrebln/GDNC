@@ -1,0 +1,26 @@
+# /etc/conf.d/gdncd: config file for /etc/init.d/gdncd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/gdnc/gdnc.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/gdncd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/gdncd.pid"
+
+# Where to write gdncd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/gdncd"
+
+# User and group to own gdncd process
+#BITCOIND_USER="gdnc"
+#BITCOIND_GROUP="gdnc"
+
+# Path to gdncd executable
+#BITCOIND_BIN="/usr/bin/gdncd"
+
+# Nice value to run gdncd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

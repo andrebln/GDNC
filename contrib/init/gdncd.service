@@ -1,0 +1,26 @@
+[Unit]
+Description=GDNC's distributed currency daemon
+After=network.target
+
+[Service]
+User=gdnc
+Group=gdnc
+
+Type=forking
+PIDFile=/var/lib/gdncd/gdncd.pid
+
+ExecStart=/usr/bin/gdncd -daemon -pid=/var/lib/gdncd/gdncd.pid \
+          -conf=/etc/gdnc/gdnc.conf -datadir=/var/lib/gdncd
+
+ExecStop=-/usr/bin/gdnc-cli -conf=/etc/gdnc/gdnc.conf \
+         -datadir=/var/lib/gdncd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
